@@ -1,0 +1,96 @@
+//Get the string length
+
+var myString = "Asia Developer Academy"
+
+console.log(myString.length);
+console.log(myString.toUpperCase());
+console.log(myString.toLowerCase());
+console.log(myString.charAt(6));
+console.log(myString.indexOf('ev'));
+console.log(myString.lastIndexOf('e'));
+console.log(myString.substring(5,14));
+console.log(myString.split(" "));
+
+
+//Find longest word length #freecodeCamp
+
+function findLongestWordLength(str){
+  var max=0
+  var stringArray=str.split(" ");
+  for (var i=0;i<stringArray.length;i++){
+    if(stringArray[i].length>max){
+      max=stringArray[i].length;
+    }
+  }
+  return max;
+}
+
+
+//reverse string
+
+function reverseString(str){
+ var answer="";
+  for(var i = 0;i<str.length;i++){
+    answer += str.charAt(str.length-i-1);
+  }
+  return answer;
+}
+console.log(reverseString("Haikal"));
+
+//number
+
+var number = 12.3456
+
+console.log(number.toPrecision(3));
+console.log(number.toFixed(3));
+
+console.log(Math.ceil(number));
+console.log(Math.floor(number));
+console.log(Math.round(number));
+console.log(Math.random());
+
+//return a random number between 1-100
+
+console.log(Math.random()*100);
+
+//Can be used throughout the application,inside and outside function curly bracket.
+
+var a = 10
+var b = 5
+
+function sayHello(){
+  //local variable that is defined within a curly bracket of function for ex
+  var c = 5
+  var d = 3
+  console.log(c);
+  console.log(a);
+}
+console.log(a)
+sayHello()
+
+
+//an object is a data type to represent a real world object in programming
+//normally it has a property which is the left part:name,company,location
+//it also might have a method
+
+var motorbike= {
+   
+  brand : "yamaha",
+  model :"250cc",
+  numberoftrips :"35",
+  price : "Rm15000"
+  
+}
+
+//code challenge
+//1) create an application that will randomly assign students from the class to do an exercise on whiteboard eg: exercise have 10 questions
+var students = ["Greg","Haikal","Syafiq","Djohan","Rachel"];
+
+
+for (var i = 0;i<10;i++){
+  
+    var index = Math.floor(Math.random()*students.length);
+  
+console.log(students[index]+" will do question number " + (i+1))
+}
+
